@@ -2,6 +2,7 @@ package test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class test {
@@ -15,8 +16,12 @@ public class test {
 	 driver.get("https://www.google.com/");
 	 driver.manage().window().maximize();
 	 Thread.sleep(5000);
+ 
+	 String actualTitle =driver.getTitle();
+	 String expectedTitle = "Googl";
+	 
+	 Assert.assertEquals(actualTitle, expectedTitle);
 	 driver.quit();
-	 Thread.sleep(5000);
 }
 	
 }
