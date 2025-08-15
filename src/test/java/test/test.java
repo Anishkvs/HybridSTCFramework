@@ -2,6 +2,7 @@ package test;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
@@ -16,8 +17,10 @@ public class test {
 //	WebDriverManager.edgedriver().setup();
 	 WebDriver driver = new EdgeDriver();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	 driver.get("https://www.google.com/");
 	 driver.manage().window().maximize();
+	driver.get("https://www.google.com/");
+	 driver.findElement(By.xpath("nam")).click();
+
 	 Thread.sleep(5000);
  
 	 String actualTitle =driver.getTitle();
