@@ -16,6 +16,7 @@ public class test {
 	 driver.manage().window().maximize();
 	 Thread.sleep(5000);
 	 driver.quit();
+	 Thread.sleep(5000);
 }
 	
 }
